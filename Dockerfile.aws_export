@@ -1,0 +1,15 @@
+FROM 763104351884.dkr.ecr.us-east-2.amazonaws.com/pytorch-inference-neuronx:1.13.1-neuronx-py310-sdk2.12.0-ubuntu20.04
+
+RUN pip install transformers-neuronx --extra-index-url=https://pip.repos.neuron.amazonaws.com
+RUN pip install accelerate optimum[neuronx] diffusers==0.16.1
+
+ENV PYTHONPATH "/opt/test"
+ENV NEURON_FUSE_SOFTMAX "1"
+
+RUN mkdir -p /opt/test
+COPY benchmark /opt/test/benchmark
+COPY start_aws.sh /start_aws.sh
+RUN chmod +x /start_aws.sh
+
+ENTRYPOINT ["/start_aws.sh"]
+# ENTRYPOINT ["python", "/opt/test/benchmark/inference/neuron_inference.py", "-n", "50", "-s", "42", "-o", "/tmp/result1.csv", "-b", "1", "-m", "/shared/sd2_compile_dir_512/"]

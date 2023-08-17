@@ -1,0 +1,6 @@
+[mer. août 16 12:34:14 2023] neuron:nmetric_post_metrics: Metric posting failed with error code: -1
+[mer. août 16 12:34:17 2023] neuron:ndma_memcpy_wait_for_completion: DMA completion timeout for UDMA_ENG_32 q0
+[mer. août 16 12:34:17 2023] neuron:ndma_memcpy_offset_move: Failed to copy memory during a NeuronCore reset: nd 0, src 0x10112b740000, dst 0xfffc2920000, size 65536. Retrying the copy.
+[mer. août 16 12:34:17 2023] neuron:ndma_memcpy_wait_for_completion: DMA completion timeout for UDMA_ENG_32 q0
+[mer. août 16 12:34:17 2023] neuron:ncdev_program_engine_nc: engine programming dma failed. nc_id: 0 addr: 17591155425280
+[mer. août 16 12:34:18 2023] neuron:npid_detach: neuron:npid_detach: pid=22712, slot=0

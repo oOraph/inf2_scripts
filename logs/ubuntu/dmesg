@@ -1,0 +1,687 @@
+[Fri Aug 18 09:44:39 2023] Linux version 5.19.0-1025-aws (buildd@bos03-amd64-035) (x86_64-linux-gnu-gcc (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #26~22.04.1-Ubuntu SMP Mon Apr 24 01:58:15 UTC 2023 (Ubuntu 5.19.0-1025.26~22.04.1-aws 5.19.17)
+[Fri Aug 18 09:44:39 2023] Command line: BOOT_IMAGE=/boot/vmlinuz-5.19.0-1025-aws root=PARTUUID=0f687d73-f2aa-4143-b9be-b065fa2d72de ro console=tty1 console=ttyS0 nvme_core.io_timeout=4294967295 panic=-1
+[Fri Aug 18 09:44:39 2023] KERNEL supported cpus:
+[Fri Aug 18 09:44:39 2023]   Intel GenuineIntel
+[Fri Aug 18 09:44:39 2023]   AMD AuthenticAMD
+[Fri Aug 18 09:44:39 2023]   Hygon HygonGenuine
+[Fri Aug 18 09:44:39 2023]   Centaur CentaurHauls
+[Fri Aug 18 09:44:39 2023]   zhaoxin   Shanghai  
+[Fri Aug 18 09:44:39 2023] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[Fri Aug 18 09:44:39 2023] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[Fri Aug 18 09:44:39 2023] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[Fri Aug 18 09:44:39 2023] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[Fri Aug 18 09:44:39 2023] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'compacted' format.
+[Fri Aug 18 09:44:39 2023] signal: max sigframe size: 1776
+[Fri Aug 18 09:44:39 2023] BIOS-provided physical RAM map:
+[Fri Aug 18 09:44:39 2023] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[Fri Aug 18 09:44:39 2023] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[Fri Aug 18 09:44:39 2023] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[Fri Aug 18 09:44:39 2023] BIOS-e820: [mem 0x0000000000100000-0x00000000bffe8fff] usable
+[Fri Aug 18 09:44:39 2023] BIOS-e820: [mem 0x00000000bffe9000-0x00000000bfffffff] reserved
+[Fri Aug 18 09:44:39 2023] BIOS-e820: [mem 0x00000000e0000000-0x00000000e03fffff] reserved
+[Fri Aug 18 09:44:39 2023] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[Fri Aug 18 09:44:39 2023] BIOS-e820: [mem 0x0000000100000000-0x00000004299fffff] usable
+[Fri Aug 18 09:44:39 2023] BIOS-e820: [mem 0x0000000429a00000-0x000000043fffffff] reserved
+[Fri Aug 18 09:44:39 2023] NX (Execute Disable) protection: active
+[Fri Aug 18 09:44:39 2023] SMBIOS 2.7 present.
+[Fri Aug 18 09:44:39 2023] DMI: Amazon EC2 inf2.xlarge/, BIOS 1.0 10/16/2017
+[Fri Aug 18 09:44:39 2023] Hypervisor detected: KVM
+[Fri Aug 18 09:44:39 2023] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[Fri Aug 18 09:44:39 2023] kvm-clock: using sched offset of 1474896595 cycles
+[Fri Aug 18 09:44:39 2023] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[Fri Aug 18 09:44:39 2023] tsc: Detected 2649.994 MHz processor
+[Fri Aug 18 09:44:39 2023] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[Fri Aug 18 09:44:39 2023] e820: remove [mem 0x000a0000-0x000fffff] usable
+[Fri Aug 18 09:44:39 2023] last_pfn = 0x429a00 max_arch_pfn = 0x400000000
+[Fri Aug 18 09:44:39 2023] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[Fri Aug 18 09:44:39 2023] last_pfn = 0xbffe9 max_arch_pfn = 0x400000000
+[Fri Aug 18 09:44:39 2023] Using GB pages for direct mapping
+[Fri Aug 18 09:44:39 2023] RAMDISK: [mem 0x372b3000-0x37950fff]
+[Fri Aug 18 09:44:39 2023] ACPI: Early table checksum verification disabled
+[Fri Aug 18 09:44:39 2023] ACPI: RSDP 0x00000000000F8F00 000014 (v00 AMAZON)
+[Fri Aug 18 09:44:39 2023] ACPI: RSDT 0x00000000BFFEE180 000044 (v01 AMAZON AMZNRSDT 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: WAET 0x00000000BFFEFFC0 000028 (v01 AMAZON AMZNWAET 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: SLIT 0x00000000BFFEFF40 00006C (v01 AMAZON AMZNSLIT 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: APIC 0x00000000BFFEFE80 000086 (v01 AMAZON AMZNAPIC 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: SRAT 0x00000000BFFEFDC0 0000C0 (v01 AMAZON AMZNSRAT 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: FACP 0x00000000BFFEFC80 000114 (v01 AMAZON AMZNFACP 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: DSDT 0x00000000BFFEEAC0 00115A (v01 AMAZON AMZNDSDT 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: FACS 0x00000000000F8EC0 000040
+[Fri Aug 18 09:44:39 2023] ACPI: HPET 0x00000000BFFEFC40 000038 (v01 AMAZON AMZNHPET 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: SSDT 0x00000000BFFEE280 00081F (v01 AMAZON AMZNSSDT 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: SSDT 0x00000000BFFEE200 00007F (v01 AMAZON AMZNSSDT 00000001 AMZN 00000001)
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving WAET table memory at [mem 0xbffeffc0-0xbffeffe7]
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving SLIT table memory at [mem 0xbffeff40-0xbffeffab]
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving APIC table memory at [mem 0xbffefe80-0xbffeff05]
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving SRAT table memory at [mem 0xbffefdc0-0xbffefe7f]
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving FACP table memory at [mem 0xbffefc80-0xbffefd93]
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving DSDT table memory at [mem 0xbffeeac0-0xbffefc19]
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving FACS table memory at [mem 0xf8ec0-0xf8eff]
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving HPET table memory at [mem 0xbffefc40-0xbffefc77]
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving SSDT table memory at [mem 0xbffee280-0xbffeea9e]
+[Fri Aug 18 09:44:39 2023] ACPI: Reserving SSDT table memory at [mem 0xbffee200-0xbffee27e]
+[Fri Aug 18 09:44:39 2023] SRAT: PXM 0 -> APIC 0x00 -> Node 0
+[Fri Aug 18 09:44:39 2023] SRAT: PXM 0 -> APIC 0x01 -> Node 0
+[Fri Aug 18 09:44:39 2023] SRAT: PXM 0 -> APIC 0x02 -> Node 0
+[Fri Aug 18 09:44:39 2023] SRAT: PXM 0 -> APIC 0x03 -> Node 0
+[Fri Aug 18 09:44:39 2023] ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0xbfffffff]
+[Fri Aug 18 09:44:39 2023] ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x43fffffff]
+[Fri Aug 18 09:44:39 2023] NUMA: Initialized distance table, cnt=1
+[Fri Aug 18 09:44:39 2023] NUMA: Node 0 [mem 0x00000000-0xbfffffff] + [mem 0x100000000-0x4299fffff] -> [mem 0x00000000-0x4299fffff]
+[Fri Aug 18 09:44:39 2023] NODE_DATA(0) allocated [mem 0x4299d4000-0x4299fefff]
+[Fri Aug 18 09:44:39 2023] Zone ranges:
+[Fri Aug 18 09:44:39 2023]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[Fri Aug 18 09:44:39 2023]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[Fri Aug 18 09:44:39 2023]   Normal   [mem 0x0000000100000000-0x00000004299fffff]
+[Fri Aug 18 09:44:39 2023]   Device   empty
+[Fri Aug 18 09:44:39 2023] Movable zone start for each node
+[Fri Aug 18 09:44:39 2023] Early memory node ranges
+[Fri Aug 18 09:44:39 2023]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[Fri Aug 18 09:44:39 2023]   node   0: [mem 0x0000000000100000-0x00000000bffe8fff]
+[Fri Aug 18 09:44:39 2023]   node   0: [mem 0x0000000100000000-0x00000004299fffff]
+[Fri Aug 18 09:44:39 2023] Initmem setup node 0 [mem 0x0000000000001000-0x00000004299fffff]
+[Fri Aug 18 09:44:39 2023] On node 0, zone DMA: 1 pages in unavailable ranges
+[Fri Aug 18 09:44:39 2023] On node 0, zone DMA: 97 pages in unavailable ranges
+[Fri Aug 18 09:44:39 2023] On node 0, zone Normal: 23 pages in unavailable ranges
+[Fri Aug 18 09:44:39 2023] On node 0, zone Normal: 26112 pages in unavailable ranges
+[Fri Aug 18 09:44:39 2023] ACPI: PM-Timer IO Port: 0xb008
+[Fri Aug 18 09:44:39 2023] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+[Fri Aug 18 09:44:39 2023] IOAPIC[0]: apic_id 0, version 32, address 0xfec00000, GSI 0-23
+[Fri Aug 18 09:44:39 2023] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+[Fri Aug 18 09:44:39 2023] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[Fri Aug 18 09:44:39 2023] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+[Fri Aug 18 09:44:39 2023] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+[Fri Aug 18 09:44:39 2023] ACPI: Using ACPI (MADT) for SMP configuration information
+[Fri Aug 18 09:44:39 2023] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[Fri Aug 18 09:44:39 2023] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[Fri Aug 18 09:44:39 2023] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[Fri Aug 18 09:44:39 2023] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[Fri Aug 18 09:44:39 2023] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[Fri Aug 18 09:44:39 2023] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[Fri Aug 18 09:44:39 2023] PM: hibernation: Registered nosave memory: [mem 0xbffe9000-0xbfffffff]
+[Fri Aug 18 09:44:39 2023] PM: hibernation: Registered nosave memory: [mem 0xc0000000-0xdfffffff]
+[Fri Aug 18 09:44:39 2023] PM: hibernation: Registered nosave memory: [mem 0xe0000000-0xe03fffff]
+[Fri Aug 18 09:44:39 2023] PM: hibernation: Registered nosave memory: [mem 0xe0400000-0xfffbffff]
+[Fri Aug 18 09:44:39 2023] PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[Fri Aug 18 09:44:39 2023] [mem 0xc0000000-0xdfffffff] available for PCI devices
+[Fri Aug 18 09:44:39 2023] Booting paravirtualized kernel on KVM
+[Fri Aug 18 09:44:39 2023] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[Fri Aug 18 09:44:39 2023] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[Fri Aug 18 09:44:39 2023] percpu: Embedded 61 pages/cpu s212992 r8192 d28672 u524288
+[Fri Aug 18 09:44:39 2023] pcpu-alloc: s212992 r8192 d28672 u524288 alloc=1*2097152
+[Fri Aug 18 09:44:39 2023] pcpu-alloc: [0] 0 1 2 3 
+[Fri Aug 18 09:44:39 2023] kvm-guest: PV spinlocks disabled, no host support
+[Fri Aug 18 09:44:39 2023] Fallback order for Node 0: 0 
+[Fri Aug 18 09:44:39 2023] Built 1 zonelists, mobility grouping on.  Total pages: 4038273
+[Fri Aug 18 09:44:39 2023] Policy zone: Normal
+[Fri Aug 18 09:44:39 2023] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.19.0-1025-aws root=PARTUUID=0f687d73-f2aa-4143-b9be-b065fa2d72de ro console=tty1 console=ttyS0 nvme_core.io_timeout=4294967295 panic=-1
+[Fri Aug 18 09:44:39 2023] Unknown kernel command line parameters "BOOT_IMAGE=/boot/vmlinuz-5.19.0-1025-aws", will be passed to user space.
+[Fri Aug 18 09:44:39 2023] Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[Fri Aug 18 09:44:39 2023] Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[Fri Aug 18 09:44:39 2023] mem auto-init: stack:off, heap alloc:on, heap free:off
+[Fri Aug 18 09:44:39 2023] Memory: 16007220K/16410140K available (18440K kernel code, 4083K rwdata, 11336K rodata, 3280K init, 4760K bss, 402660K reserved, 0K cma-reserved)
+[Fri Aug 18 09:44:39 2023] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[Fri Aug 18 09:44:39 2023] ftrace: allocating 52434 entries in 205 pages
+[Fri Aug 18 09:44:39 2023] ftrace section at ffffffff89611160 sorted properly
+[Fri Aug 18 09:44:39 2023] ftrace: allocated 205 pages with 5 groups
+[Fri Aug 18 09:44:39 2023] rcu: Hierarchical RCU implementation.
+[Fri Aug 18 09:44:39 2023] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=4.
+[Fri Aug 18 09:44:39 2023] 	Rude variant of Tasks RCU enabled.
+[Fri Aug 18 09:44:39 2023] 	Tracing variant of Tasks RCU enabled.
+[Fri Aug 18 09:44:39 2023] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[Fri Aug 18 09:44:39 2023] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[Fri Aug 18 09:44:39 2023] NR_IRQS: 524544, nr_irqs: 456, preallocated irqs: 16
+[Fri Aug 18 09:44:39 2023] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[Fri Aug 18 09:44:39 2023] random: crng init done
+[Fri Aug 18 09:44:39 2023] Console: colour VGA+ 80x25
+[Fri Aug 18 09:44:39 2023] printk: console [tty1] enabled
+[Fri Aug 18 09:44:39 2023] printk: console [ttyS0] enabled
+[Fri Aug 18 09:44:39 2023] ACPI: Core revision 20220331
+[Fri Aug 18 09:44:39 2023] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 30580167144 ns
+[Fri Aug 18 09:44:39 2023] APIC: Switch to symmetric I/O mode setup
+[Fri Aug 18 09:44:39 2023] x2apic enabled
+[Fri Aug 18 09:44:39 2023] Switched APIC routing to physical x2apic.
+[Fri Aug 18 09:44:39 2023] ..TIMER: vector=0x30 apic1=0 pin1=0 apic2=-1 pin2=-1
+[Fri Aug 18 09:44:39 2023] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2632b7a5ba8, max_idle_ns: 440795243003 ns
+[Fri Aug 18 09:44:39 2023] Calibrating delay loop (skipped) preset value.. 5299.98 BogoMIPS (lpj=10599976)
+[Fri Aug 18 09:44:39 2023] pid_max: default: 32768 minimum: 301
+[Fri Aug 18 09:44:39 2023] LSM: Security Framework initializing
+[Fri Aug 18 09:44:39 2023] landlock: Up and running.
+[Fri Aug 18 09:44:39 2023] Yama: becoming mindful.
+[Fri Aug 18 09:44:39 2023] AppArmor: AppArmor initialized
+[Fri Aug 18 09:44:39 2023] Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[Fri Aug 18 09:44:39 2023] Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[Fri Aug 18 09:44:39 2023] Last level iTLB entries: 4KB 512, 2MB 512, 4MB 256
+[Fri Aug 18 09:44:39 2023] Last level dTLB entries: 4KB 2048, 2MB 2048, 4MB 1024, 1GB 0
+[Fri Aug 18 09:44:39 2023] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[Fri Aug 18 09:44:39 2023] Spectre V2 : Mitigation: Retpolines
+[Fri Aug 18 09:44:39 2023] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[Fri Aug 18 09:44:39 2023] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[Fri Aug 18 09:44:39 2023] Spectre V2 : Enabling Restricted Speculation for firmware calls
+[Fri Aug 18 09:44:39 2023] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[Fri Aug 18 09:44:39 2023] Spectre V2 : User space: Mitigation: STIBP via prctl
+[Fri Aug 18 09:44:39 2023] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+[Fri Aug 18 09:44:39 2023] Freeing SMP alternatives memory: 44K
+[Fri Aug 18 09:44:39 2023] smpboot: CPU0: AMD EPYC 7R13 Processor (family: 0x19, model: 0x1, stepping: 0x1)
+[Fri Aug 18 09:44:39 2023] cblist_init_generic: Setting adjustable number of callback queues.
+[Fri Aug 18 09:44:39 2023] cblist_init_generic: Setting shift to 2 and lim to 1.
+[Fri Aug 18 09:44:39 2023] cblist_init_generic: Setting shift to 2 and lim to 1.
+[Fri Aug 18 09:44:39 2023] Performance Events: PMU not available due to virtualization, using software events only.
+[Fri Aug 18 09:44:39 2023] rcu: Hierarchical SRCU implementation.
+[Fri Aug 18 09:44:39 2023] rcu: 	Max phase no-delay instances is 1000.
+[Fri Aug 18 09:44:39 2023] NMI watchdog: Perf NMI watchdog permanently disabled
+[Fri Aug 18 09:44:39 2023] smp: Bringing up secondary CPUs ...
+[Fri Aug 18 09:44:39 2023] x86: Booting SMP configuration:
+[Fri Aug 18 09:44:39 2023] .... node  #0, CPUs:      #1 #2 #3
+[Fri Aug 18 09:44:39 2023] smp: Brought up 1 node, 4 CPUs
+[Fri Aug 18 09:44:39 2023] smpboot: Max logical packages: 1
+[Fri Aug 18 09:44:39 2023] smpboot: Total of 4 processors activated (21199.95 BogoMIPS)
+[Fri Aug 18 09:44:39 2023] devtmpfs: initialized
+[Fri Aug 18 09:44:39 2023] x86/mm: Memory block size: 128MB
+[Fri Aug 18 09:44:39 2023] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[Fri Aug 18 09:44:39 2023] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[Fri Aug 18 09:44:39 2023] pinctrl core: initialized pinctrl subsystem
+[Fri Aug 18 09:44:39 2023] PM: RTC time: 09:44:39, date: 2023-08-18
+[Fri Aug 18 09:44:39 2023] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[Fri Aug 18 09:44:39 2023] DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+[Fri Aug 18 09:44:39 2023] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[Fri Aug 18 09:44:40 2023] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[Fri Aug 18 09:44:40 2023] audit: initializing netlink subsys (disabled)
+[Fri Aug 18 09:44:40 2023] audit: type=2000 audit(1692351879.820:1): state=initialized audit_enabled=0 res=1
+[Fri Aug 18 09:44:40 2023] thermal_sys: Registered thermal governor 'fair_share'
+[Fri Aug 18 09:44:40 2023] thermal_sys: Registered thermal governor 'bang_bang'
+[Fri Aug 18 09:44:40 2023] thermal_sys: Registered thermal governor 'step_wise'
+[Fri Aug 18 09:44:40 2023] thermal_sys: Registered thermal governor 'user_space'
+[Fri Aug 18 09:44:40 2023] thermal_sys: Registered thermal governor 'power_allocator'
+[Fri Aug 18 09:44:40 2023] EISA bus registered
+[Fri Aug 18 09:44:40 2023] cpuidle: using governor ladder
+[Fri Aug 18 09:44:40 2023] cpuidle: using governor menu
+[Fri Aug 18 09:44:40 2023] HugeTLB: can optimize 4095 vmemmap pages for hugepages-1048576kB
+[Fri Aug 18 09:44:40 2023] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[Fri Aug 18 09:44:40 2023] PCI: Using configuration type 1 for base access
+[Fri Aug 18 09:44:40 2023] PCI: Using configuration type 1 for extended access
+[Fri Aug 18 09:44:40 2023] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[Fri Aug 18 09:44:40 2023] HugeTLB: can optimize 7 vmemmap pages for hugepages-2048kB
+[Fri Aug 18 09:44:40 2023] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[Fri Aug 18 09:44:40 2023] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[Fri Aug 18 09:44:40 2023] ACPI: Added _OSI(Module Device)
+[Fri Aug 18 09:44:40 2023] ACPI: Added _OSI(Processor Device)
+[Fri Aug 18 09:44:40 2023] ACPI: Added _OSI(3.0 _SCP Extensions)
+[Fri Aug 18 09:44:40 2023] ACPI: Added _OSI(Processor Aggregator Device)
+[Fri Aug 18 09:44:40 2023] ACPI: Added _OSI(Linux-Dell-Video)
+[Fri Aug 18 09:44:40 2023] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[Fri Aug 18 09:44:40 2023] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[Fri Aug 18 09:44:40 2023] ACPI: 3 ACPI AML tables successfully acquired and loaded
+[Fri Aug 18 09:44:40 2023] ACPI: Interpreter enabled
+[Fri Aug 18 09:44:40 2023] ACPI: PM: (supports S0 S4 S5)
+[Fri Aug 18 09:44:40 2023] ACPI: Using IOAPIC for interrupt routing
+[Fri Aug 18 09:44:40 2023] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[Fri Aug 18 09:44:40 2023] PCI: Using E820 reservations for host bridge windows
+[Fri Aug 18 09:44:40 2023] ACPI: Enabled 2 GPEs in block 00 to 0F
+[Fri Aug 18 09:44:40 2023] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[Fri Aug 18 09:44:40 2023] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [3] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [4] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [5] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [6] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [7] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [8] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [9] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [10] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [11] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [12] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [13] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [14] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [15] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [16] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [17] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [18] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [19] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [20] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [21] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [22] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [23] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [24] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [25] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [26] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [27] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [28] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [29] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [30] registered
+[Fri Aug 18 09:44:40 2023] acpiphp: Slot [31] registered
+[Fri Aug 18 09:44:40 2023] PCI host bridge to bus 0000:00
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: root bus resource [mem 0x440000000-0x20043fffffff window]
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: root bus resource [bus 00-ff]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: [8086:7113] type 00 class 0x000000
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: quirk: [io  0xb100-0xb10f] claimed by PIIX4 SMB
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: PIIX4 devres E PIO at fff0-ffff
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: PIIX4 devres F MMIO at ffc00000-ffffffff
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: PIIX4 devres G PIO at fff0-ffff
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: PIIX4 devres H MMIO at ffc00000-ffffffff
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: PIIX4 devres I PIO at fff0-ffff
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: PIIX4 devres J PIO at fff0-ffff
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.3: quirk_piix4_acpi+0x0/0x180 took 31250 usecs
+[Fri Aug 18 09:44:40 2023] pci 0000:00:03.0: [1d0f:1111] type 00 class 0x030000
+[Fri Aug 18 09:44:40 2023] pci 0000:00:03.0: reg 0x10: [mem 0xfe400000-0xfe7fffff pref]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:03.0: reg 0x30: [mem 0xfebe0000-0xfebeffff pref]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:03.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:04.0: [1d0f:8061] type 00 class 0x010802
+[Fri Aug 18 09:44:40 2023] pci 0000:00:04.0: reg 0x10: [mem 0xfebf0000-0xfebf3fff]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:04.0: enabling Extended Tags
+[Fri Aug 18 09:44:40 2023] pci 0000:00:05.0: [1d0f:ec20] type 00 class 0x020000
+[Fri Aug 18 09:44:40 2023] pci 0000:00:05.0: reg 0x10: [mem 0xfebf4000-0xfebf5fff]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:05.0: reg 0x14: [mem 0xfebf6000-0xfebf7fff]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:05.0: reg 0x18: [mem 0xfe800000-0xfe87ffff pref]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:05.0: enabling Extended Tags
+[Fri Aug 18 09:44:40 2023] pci 0000:00:1f.0: [1d0f:7264] type 00 class 0x088000
+[Fri Aug 18 09:44:40 2023] pci 0000:00:1f.0: reg 0x10: [mem 0x1000000000-0x103fffffff 64bit pref]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:1f.0: reg 0x18: [mem 0xfebf8000-0xfebf9fff]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:1f.0: reg 0x20: [mem 0x800000000-0xfffffffff 64bit pref]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:1f.0: 126.024 Gb/s available PCIe bandwidth, limited by 16.0 GT/s PCIe x8 link at 0000:00:1f.0 (capable of 252.056 Gb/s with 32.0 GT/s PCIe x8 link)
+[Fri Aug 18 09:44:40 2023] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+[Fri Aug 18 09:44:40 2023] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+[Fri Aug 18 09:44:40 2023] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+[Fri Aug 18 09:44:40 2023] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+[Fri Aug 18 09:44:40 2023] ACPI: PCI: Interrupt link LNKS configured for IRQ 9
+[Fri Aug 18 09:44:40 2023] iommu: Default domain type: Translated 
+[Fri Aug 18 09:44:40 2023] iommu: DMA domain TLB invalidation policy: lazy mode 
+[Fri Aug 18 09:44:40 2023] SCSI subsystem initialized
+[Fri Aug 18 09:44:40 2023] libata version 3.00 loaded.
+[Fri Aug 18 09:44:40 2023] ACPI: bus type USB registered
+[Fri Aug 18 09:44:40 2023] usbcore: registered new interface driver usbfs
+[Fri Aug 18 09:44:40 2023] usbcore: registered new interface driver hub
+[Fri Aug 18 09:44:40 2023] usbcore: registered new device driver usb
+[Fri Aug 18 09:44:40 2023] pps_core: LinuxPPS API ver. 1 registered
+[Fri Aug 18 09:44:40 2023] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[Fri Aug 18 09:44:40 2023] PTP clock support registered
+[Fri Aug 18 09:44:40 2023] EDAC MC: Ver: 3.0.0
+[Fri Aug 18 09:44:40 2023] NetLabel: Initializing
+[Fri Aug 18 09:44:40 2023] NetLabel:  domain hash size = 128
+[Fri Aug 18 09:44:40 2023] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[Fri Aug 18 09:44:40 2023] NetLabel:  unlabeled traffic allowed by default
+[Fri Aug 18 09:44:40 2023] mctp: management component transport protocol core
+[Fri Aug 18 09:44:40 2023] NET: Registered PF_MCTP protocol family
+[Fri Aug 18 09:44:40 2023] PCI: Using ACPI for IRQ routing
+[Fri Aug 18 09:44:40 2023] PCI: pci_cache_line_size set to 64 bytes
+[Fri Aug 18 09:44:40 2023] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[Fri Aug 18 09:44:40 2023] e820: reserve RAM buffer [mem 0xbffe9000-0xbfffffff]
+[Fri Aug 18 09:44:40 2023] e820: reserve RAM buffer [mem 0x429a00000-0x42bffffff]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:03.0: vgaarb: setting as boot VGA device
+[Fri Aug 18 09:44:40 2023] pci 0000:00:03.0: vgaarb: bridge control possible
+[Fri Aug 18 09:44:40 2023] pci 0000:00:03.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[Fri Aug 18 09:44:40 2023] vgaarb: loaded
+[Fri Aug 18 09:44:40 2023] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[Fri Aug 18 09:44:40 2023] hpet0: 8 comparators, 32-bit 62.500000 MHz counter
+[Fri Aug 18 09:44:40 2023] clocksource: Switched to clocksource kvm-clock
+[Fri Aug 18 09:44:40 2023] VFS: Disk quotas dquot_6.6.0
+[Fri Aug 18 09:44:40 2023] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[Fri Aug 18 09:44:40 2023] AppArmor: AppArmor Filesystem Enabled
+[Fri Aug 18 09:44:40 2023] pnp: PnP ACPI init
+[Fri Aug 18 09:44:40 2023] pnp: PnP ACPI: found 5 devices
+[Fri Aug 18 09:44:40 2023] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[Fri Aug 18 09:44:40 2023] NET: Registered PF_INET protocol family
+[Fri Aug 18 09:44:40 2023] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[Fri Aug 18 09:44:40 2023] tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[Fri Aug 18 09:44:40 2023] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[Fri Aug 18 09:44:40 2023] TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[Fri Aug 18 09:44:40 2023] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+[Fri Aug 18 09:44:40 2023] TCP: Hash tables configured (established 131072 bind 65536)
+[Fri Aug 18 09:44:40 2023] MPTCP token hash table entries: 16384 (order: 6, 393216 bytes, linear)
+[Fri Aug 18 09:44:40 2023] UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[Fri Aug 18 09:44:40 2023] UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[Fri Aug 18 09:44:40 2023] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[Fri Aug 18 09:44:40 2023] NET: Registered PF_XDP protocol family
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: resource 7 [mem 0xc0000000-0xfebfffff window]
+[Fri Aug 18 09:44:40 2023] pci_bus 0000:00: resource 8 [mem 0x440000000-0x20043fffffff window]
+[Fri Aug 18 09:44:40 2023] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[Fri Aug 18 09:44:40 2023] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[Fri Aug 18 09:44:40 2023] PCI: CLS 64 bytes, default 64
+[Fri Aug 18 09:44:40 2023] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[Fri Aug 18 09:44:40 2023] Trying to unpack rootfs image as initramfs...
+[Fri Aug 18 09:44:40 2023] software IO TLB: mapped [mem 0x00000000bbfe9000-0x00000000bffe9000] (64MB)
+[Fri Aug 18 09:44:40 2023] Freeing initrd memory: 6776K
+[Fri Aug 18 09:44:40 2023] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2632b7a5ba8, max_idle_ns: 440795243003 ns
+[Fri Aug 18 09:44:40 2023] clocksource: Switched to clocksource tsc
+[Fri Aug 18 09:44:40 2023] Initialise system trusted keyrings
+[Fri Aug 18 09:44:40 2023] Key type blacklist registered
+[Fri Aug 18 09:44:40 2023] workingset: timestamp_bits=36 max_order=22 bucket_order=0
+[Fri Aug 18 09:44:40 2023] zbud: loaded
+[Fri Aug 18 09:44:40 2023] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[Fri Aug 18 09:44:40 2023] fuse: init (API version 7.36)
+[Fri Aug 18 09:44:40 2023] integrity: Platform Keyring initialized
+[Fri Aug 18 09:44:40 2023] integrity: Machine keyring initialized
+[Fri Aug 18 09:44:40 2023] Key type asymmetric registered
+[Fri Aug 18 09:44:40 2023] Asymmetric key parser 'x509' registered
+[Fri Aug 18 09:44:40 2023] alg: self-tests for CTR-KDF (hmac(sha256)) passed
+[Fri Aug 18 09:44:40 2023] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 243)
+[Fri Aug 18 09:44:40 2023] io scheduler mq-deadline registered
+[Fri Aug 18 09:44:40 2023] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[Fri Aug 18 09:44:40 2023] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[Fri Aug 18 09:44:40 2023] ACPI: button: Power Button [PWRF]
+[Fri Aug 18 09:44:40 2023] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[Fri Aug 18 09:44:40 2023] ACPI: button: Sleep Button [SLPF]
+[Fri Aug 18 09:44:40 2023] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[Fri Aug 18 09:44:40 2023] 00:04: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[Fri Aug 18 09:44:40 2023] Linux agpgart interface v0.103
+[Fri Aug 18 09:44:40 2023] loop: module loaded
+[Fri Aug 18 09:44:40 2023] nvme nvme0: pci function 0000:00:04.0
+[Fri Aug 18 09:44:40 2023] tun: Universal TUN/TAP device driver, 1.6
+[Fri Aug 18 09:44:40 2023] ACPI: \_SB_.LNKD: Enabled at IRQ 11
+[Fri Aug 18 09:44:40 2023] PPP generic driver version 2.4.2
+[Fri Aug 18 09:44:40 2023] VFIO - User Level meta-driver version: 0.3
+[Fri Aug 18 09:44:40 2023] Spurious interrupt (vector 0xef) on CPU#0. Acked
+[Fri Aug 18 09:44:40 2023] nvme nvme0: 2/0/0 default/read/poll queues
+[Fri Aug 18 09:44:40 2023] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[Fri Aug 18 09:44:40 2023] ehci-pci: EHCI PCI platform driver
+[Fri Aug 18 09:44:40 2023] GPT:Primary header thinks Alt. header is not at the end of the disk.
+[Fri Aug 18 09:44:40 2023] ehci-platform: EHCI generic platform driver
+[Fri Aug 18 09:44:40 2023] GPT:16777215 != 209715199
+[Fri Aug 18 09:44:40 2023] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[Fri Aug 18 09:44:40 2023] GPT:Alternate GPT header not at the end of the disk.
+[Fri Aug 18 09:44:40 2023] ohci-pci: OHCI PCI platform driver
+[Fri Aug 18 09:44:40 2023] GPT:16777215 != 209715199
+[Fri Aug 18 09:44:40 2023] ohci-platform: OHCI generic platform driver
+[Fri Aug 18 09:44:40 2023] GPT: Use GNU Parted to correct GPT errors.
+[Fri Aug 18 09:44:40 2023] uhci_hcd: USB Universal Host Controller Interface driver
+[Fri Aug 18 09:44:40 2023]  nvme0n1: p1 p14 p15
+[Fri Aug 18 09:44:40 2023] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[Fri Aug 18 09:44:40 2023] i8042: Warning: Keylock active
+[Fri Aug 18 09:44:40 2023] serio: i8042 KBD port at 0x60,0x64 irq 1
+[Fri Aug 18 09:44:40 2023] serio: i8042 AUX port at 0x60,0x64 irq 12
+[Fri Aug 18 09:44:40 2023] mousedev: PS/2 mouse device common for all mice
+[Fri Aug 18 09:44:40 2023] rtc_cmos 00:00: RTC can wake from S4
+[Fri Aug 18 09:44:40 2023] rtc_cmos 00:00: registered as rtc0
+[Fri Aug 18 09:44:40 2023] rtc_cmos 00:00: setting system clock to 2023-08-18T09:44:40 UTC (1692351880)
+[Fri Aug 18 09:44:40 2023] rtc_cmos 00:00: alarms up to one day, 114 bytes nvram
+[Fri Aug 18 09:44:40 2023] i2c_dev: i2c /dev entries driver
+[Fri Aug 18 09:44:40 2023] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[Fri Aug 18 09:44:40 2023] device-mapper: uevent: version 1.0.3
+[Fri Aug 18 09:44:40 2023] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+[Fri Aug 18 09:44:40 2023] platform eisa.0: Probing EISA bus 0
+[Fri Aug 18 09:44:40 2023] platform eisa.0: EISA: Cannot allocate resource for mainboard
+[Fri Aug 18 09:44:40 2023] platform eisa.0: Cannot allocate resource for EISA slot 1
+[Fri Aug 18 09:44:40 2023] platform eisa.0: Cannot allocate resource for EISA slot 2
+[Fri Aug 18 09:44:40 2023] platform eisa.0: Cannot allocate resource for EISA slot 3
+[Fri Aug 18 09:44:40 2023] platform eisa.0: Cannot allocate resource for EISA slot 4
+[Fri Aug 18 09:44:40 2023] platform eisa.0: Cannot allocate resource for EISA slot 5
+[Fri Aug 18 09:44:40 2023] platform eisa.0: Cannot allocate resource for EISA slot 6
+[Fri Aug 18 09:44:40 2023] platform eisa.0: Cannot allocate resource for EISA slot 7
+[Fri Aug 18 09:44:40 2023] platform eisa.0: Cannot allocate resource for EISA slot 8
+[Fri Aug 18 09:44:40 2023] platform eisa.0: EISA: Detected 0 cards
+[Fri Aug 18 09:44:40 2023] ledtrig-cpu: registered to indicate activity on CPUs
+[Fri Aug 18 09:44:40 2023] drop_monitor: Initializing network drop monitor service
+[Fri Aug 18 09:44:40 2023] NET: Registered PF_INET6 protocol family
+[Fri Aug 18 09:44:40 2023] Segment Routing with IPv6
+[Fri Aug 18 09:44:40 2023] In-situ OAM (IOAM) with IPv6
+[Fri Aug 18 09:44:40 2023] NET: Registered PF_PACKET protocol family
+[Fri Aug 18 09:44:40 2023] Key type dns_resolver registered
+[Fri Aug 18 09:44:40 2023] IPI shorthand broadcast: enabled
+[Fri Aug 18 09:44:40 2023] sched_clock: Marking stable (1368167246, 611487220)->(2034082654, -54428188)
+[Fri Aug 18 09:44:40 2023] registered taskstats version 1
+[Fri Aug 18 09:44:40 2023] Loading compiled-in X.509 certificates
+[Fri Aug 18 09:44:40 2023] Loaded X.509 cert 'Build time autogenerated kernel key: mutefalsepositive'
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[Fri Aug 18 09:44:41 2023] blacklist: Loading compiled-in revocation X.509 certificates
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+[Fri Aug 18 09:44:41 2023] zswap: loaded using pool lzo/zbud
+[Fri Aug 18 09:44:41 2023] Key type .fscrypt registered
+[Fri Aug 18 09:44:41 2023] Key type fscrypt-provisioning registered
+[Fri Aug 18 09:44:41 2023] Key type encrypted registered
+[Fri Aug 18 09:44:41 2023] AppArmor: AppArmor sha1 policy hashing enabled
+[Fri Aug 18 09:44:41 2023] ima: No TPM chip found, activating TPM-bypass!
+[Fri Aug 18 09:44:41 2023] Loading compiled-in module X.509 certificates
+[Fri Aug 18 09:44:41 2023] Loaded X.509 cert 'Build time autogenerated kernel key: mutefalsepositive' 
+[Fri Aug 18 09:44:41 2023] ima: Allocated hash algorithm: sha1
+[Fri Aug 18 09:44:41 2023] ima: No architecture policies found
+[Fri Aug 18 09:44:41 2023] evm: Initialising EVM extended attributes:
+[Fri Aug 18 09:44:41 2023] evm: security.selinux
+[Fri Aug 18 09:44:41 2023] evm: security.SMACK64
+[Fri Aug 18 09:44:41 2023] evm: security.SMACK64EXEC
+[Fri Aug 18 09:44:41 2023] evm: security.SMACK64TRANSMUTE
+[Fri Aug 18 09:44:41 2023] evm: security.SMACK64MMAP
+[Fri Aug 18 09:44:41 2023] evm: security.apparmor
+[Fri Aug 18 09:44:41 2023] evm: security.ima
+[Fri Aug 18 09:44:41 2023] evm: security.capability
+[Fri Aug 18 09:44:41 2023] evm: HMAC attrs: 0x1
+[Fri Aug 18 09:44:41 2023] PM:   Magic number: 3:4:728
+[Fri Aug 18 09:44:41 2023] RAS: Correctable Errors collector initialized.
+[Fri Aug 18 09:44:41 2023] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[Fri Aug 18 09:44:41 2023] md: Waiting for all devices to be available before autodetect
+[Fri Aug 18 09:44:41 2023] md: If you don't use raid, use raid=noautodetect
+[Fri Aug 18 09:44:41 2023] md: Autodetecting RAID arrays.
+[Fri Aug 18 09:44:41 2023] md: autorun ...
+[Fri Aug 18 09:44:41 2023] md: ... autorun DONE.
+[Fri Aug 18 09:44:41 2023] EXT4-fs (nvme0n1p1): mounted filesystem with ordered data mode. Quota mode: none.
+[Fri Aug 18 09:44:41 2023] VFS: Mounted root (ext4 filesystem) readonly on device 259:1.
+[Fri Aug 18 09:44:41 2023] devtmpfs: mounted
+[Fri Aug 18 09:44:41 2023] Freeing unused decrypted memory: 2036K
+[Fri Aug 18 09:44:41 2023] Freeing unused kernel image (initmem) memory: 3280K
+[Fri Aug 18 09:44:41 2023] Write protecting the kernel read-only data: 32768k
+[Fri Aug 18 09:44:41 2023] Freeing unused kernel image (text/rodata gap) memory: 2036K
+[Fri Aug 18 09:44:41 2023] Freeing unused kernel image (rodata/data gap) memory: 952K
+[Fri Aug 18 09:44:41 2023] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[Fri Aug 18 09:44:41 2023] Run /sbin/init as init process
+[Fri Aug 18 09:44:41 2023]   with arguments:
+[Fri Aug 18 09:44:41 2023]     /sbin/init
+[Fri Aug 18 09:44:41 2023]   with environment:
+[Fri Aug 18 09:44:41 2023]     HOME=/
+[Fri Aug 18 09:44:41 2023]     TERM=linux
+[Fri Aug 18 09:44:41 2023]     BOOT_IMAGE=/boot/vmlinuz-5.19.0-1025-aws
+[Fri Aug 18 09:44:42 2023] systemd[1]: Inserted module 'autofs4'
+[Fri Aug 18 09:44:42 2023] systemd[1]: systemd 249.11-0ubuntu3.9 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY -P11KIT -QRENCODE +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[Fri Aug 18 09:44:42 2023] systemd[1]: Detected virtualization amazon.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Detected architecture x86-64.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Hostname set to <ubuntu>.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Initializing machine ID from VM UUID.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Installed transient /etc/machine-id file.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Queued start job for default target Graphical Interface.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Created slice Slice /system/modprobe.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Created slice Slice /system/serial-getty.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Created slice Slice /system/systemd-fsck.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Created slice User and Session Slice.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Reached target Slice Units.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Reached target Mounting snaps.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Reached target Swaps.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Reached target System Time Set.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Reached target Local Verity Protected Volumes.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on LVM2 poll daemon socket.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on multipathd control socket.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on Syslog Socket.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on fsck to fsckd communication Socket.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on Journal Audit Socket.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on Journal Socket (/dev/log).
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on Journal Socket.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on Network Service Netlink Socket.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on udev Control Socket.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Listening on udev Kernel Socket.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Mounting Huge Pages File System...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Mounting POSIX Message Queue File System...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Mounting Kernel Debug File System...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Mounting Kernel Trace File System...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Journal Service...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Set the console keyboard layout...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Create List of Static Device Nodes...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Condition check resulted in LXD - agent being skipped.
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Load Kernel Module chromeos_pstore...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Load Kernel Module configfs...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Load Kernel Module drm...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Load Kernel Module efi_pstore...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Load Kernel Module fuse...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Load Kernel Module pstore_blk...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Load Kernel Module pstore_zone...
+[Fri Aug 18 09:44:42 2023] systemd[1]: Starting Load Kernel Module ramoops...
+[Fri Aug 18 09:44:43 2023] systemd[1]: Condition check resulted in OpenVSwitch configuration for cleanup being skipped.
+[Fri Aug 18 09:44:43 2023] systemd[1]: Starting File System Check on Root Device...
+[Fri Aug 18 09:44:43 2023] systemd[1]: Starting Load Kernel Modules...
+[Fri Aug 18 09:44:43 2023] systemd[1]: Starting Coldplug All udev Devices...
+[Fri Aug 18 09:44:43 2023] systemd[1]: Started Journal Service.
+[Fri Aug 18 09:44:43 2023] ACPI: bus type drm_connector registered
+[Fri Aug 18 09:44:43 2023] EXT4-fs (nvme0n1p1): re-mounted. Quota mode: none.
+[Fri Aug 18 09:44:43 2023] alua: device handler registered
+[Fri Aug 18 09:44:43 2023] systemd-journald[182]: Received client request to flush runtime journal.
+[Fri Aug 18 09:44:43 2023] emc: device handler registered
+[Fri Aug 18 09:44:43 2023] rdac: device handler registered
+[Fri Aug 18 09:44:43 2023] cryptd: max_cpu_qlen set to 1000
+[Fri Aug 18 09:44:43 2023] AVX2 version of gcm_enc/dec engaged.
+[Fri Aug 18 09:44:43 2023] AES CTR mode by8 optimization enabled
+[Fri Aug 18 09:44:43 2023] ena 0000:00:05.0: ENA device version: 0.10
+[Fri Aug 18 09:44:43 2023] ena 0000:00:05.0: ENA controller version: 0.0.1 implementation version 1
+[Fri Aug 18 09:44:43 2023] parport_pc 00:03: reported by Plug and Play ACPI
+[Fri Aug 18 09:44:43 2023] ena 0000:00:05.0: Elastic Network Adapter (ENA) found at mem febf4000, mac addr 0a:25:f7:e5:98:47
+[Fri Aug 18 09:44:43 2023] ppdev: user-space parallel port driver
+[Fri Aug 18 09:44:43 2023] ena 0000:00:05.0 ens5: renamed from eth0
+[Fri Aug 18 09:44:43 2023] loop0: detected capacity change from 0 to 49944
+[Fri Aug 18 09:44:43 2023] loop1: detected capacity change from 0 to 113944
+[Fri Aug 18 09:44:43 2023] loop2: detected capacity change from 0 to 129712
+[Fri Aug 18 09:44:43 2023] loop3: detected capacity change from 0 to 229272
+[Fri Aug 18 09:44:43 2023] loop4: detected capacity change from 0 to 109032
+[Fri Aug 18 09:44:43 2023] audit: type=1400 audit(1692351883.587:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=350 comm="apparmor_parser"
+[Fri Aug 18 09:44:43 2023] audit: type=1400 audit(1692351883.591:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=349 comm="apparmor_parser"
+[Fri Aug 18 09:44:43 2023] audit: type=1400 audit(1692351883.591:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=350 comm="apparmor_parser"
+[Fri Aug 18 09:44:43 2023] audit: type=1400 audit(1692351883.611:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=352 comm="apparmor_parser"
+[Fri Aug 18 09:44:43 2023] audit: type=1400 audit(1692351883.611:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=352 comm="apparmor_parser"
+[Fri Aug 18 09:44:43 2023] audit: type=1400 audit(1692351883.611:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=352 comm="apparmor_parser"
+[Fri Aug 18 09:44:44 2023] audit: type=1400 audit(1692351883.707:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="tcpdump" pid=353 comm="apparmor_parser"
+[Fri Aug 18 09:44:44 2023] audit: type=1400 audit(1692351883.707:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/chronyd" pid=355 comm="apparmor_parser"
+[Fri Aug 18 09:44:44 2023] audit: type=1400 audit(1692351883.723:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=351 comm="apparmor_parser"
+[Fri Aug 18 09:44:44 2023] input: ImPS/2 Generic Wheel Mouse as /devices/platform/i8042/serio1/input/input4
+[Fri Aug 18 09:44:45 2023] kauditd_printk_skb: 22 callbacks suppressed
+[Fri Aug 18 09:44:45 2023] audit: type=1400 audit(1692351884.627:33): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.lxd.migrate" pid=389 comm="apparmor_parser"
+[Fri Aug 18 09:44:45 2023] audit: type=1400 audit(1692351884.631:34): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.lxd.user-daemon" pid=390 comm="apparmor_parser"
+[Fri Aug 18 09:44:45 2023] audit: type=1400 audit(1692351884.899:35): apparmor="DENIED" operation="exec" class="file" profile="/{,usr/}sbin/dhclient" name="/usr/bin/true" pid=401 comm="dhclient" requested_mask="x" denied_mask="x" fsuid=0 ouid=0
+[Fri Aug 18 09:44:45 2023] audit: type=1400 audit(1692351884.923:36): apparmor="DENIED" operation="exec" class="file" profile="/{,usr/}sbin/dhclient" name="/usr/bin/true" pid=402 comm="isc-worker0000" requested_mask="x" denied_mask="x" fsuid=0 ouid=0
+[Fri Aug 18 09:44:46 2023] IPv6: ADDRCONF(NETDEV_CHANGE): ens5: link becomes ready
+[Fri Aug 18 09:44:49 2023] EXT4-fs (nvme0n1p1): resizing filesystem from 2068731 to 26185979 blocks
+[Fri Aug 18 09:44:49 2023] EXT4-fs (nvme0n1p1): resized filesystem to 26185979
+[Fri Aug 18 09:44:51 2023] loop5: detected capacity change from 0 to 8
+[Fri Aug 18 09:45:55 2023] neuron: loading out-of-tree module taints kernel.
+[Fri Aug 18 09:45:55 2023] neuron: module verification failed: signature and/or required key missing - tainting kernel
+[Fri Aug 18 09:45:55 2023] Neuron Driver Started with Version:2.11.9.0-b2da78634578f976fb49e4039ecc14a0e102973d
+[Fri Aug 18 09:45:55 2023] ACPI: \_SB_.LNKC: Enabled at IRQ 10
+[Fri Aug 18 09:45:55 2023] ** BDF: 00:1f.0 => nd[0] (routing id: 0)
+[Fri Aug 18 09:45:55 2023] neuron:mpset_constructor: reserved 134217728 bytes of host memory
+[Fri Aug 18 09:45:55 2023] neuron:nr_reset_thread_fn: nd0: initiating reset request 4294967295
+[Fri Aug 18 09:46:04 2023] neuron:nr_reset_thread_fn: nd0: reset request 4294967295 completed
+[Fri Aug 18 09:46:34 2023] audit: type=1400 audit(1692351994.928:37): apparmor="STATUS" operation="profile_load" profile="unconfined" name="docker-default" pid=11598 comm="apparmor_parser"
+[Fri Aug 18 09:46:35 2023] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[Fri Aug 18 09:46:35 2023] Bridge firewalling registered
+[Fri Aug 18 09:46:35 2023] Initializing XFRM netlink socket
+[Fri Aug 18 09:49:00 2023] neuron:npid_attach: neuron:npid_attach: pid=11883, slot=0
+[Fri Aug 18 09:49:54 2023] neuron:npid_attach: neuron:npid_attach: pid=12022, slot=1
+[Fri Aug 18 09:49:54 2023] neuron:npid_detach: neuron:npid_detach: pid=12022, slot=1
+[Fri Aug 18 09:50:53 2023] docker0: port 1(veth9bf9598) entered blocking state
+[Fri Aug 18 09:50:53 2023] docker0: port 1(veth9bf9598) entered disabled state
+[Fri Aug 18 09:50:53 2023] device veth9bf9598 entered promiscuous mode
+[Fri Aug 18 09:50:53 2023] eth0: renamed from vetha58e5e1
+[Fri Aug 18 09:50:53 2023] IPv6: ADDRCONF(NETDEV_CHANGE): veth9bf9598: link becomes ready
+[Fri Aug 18 09:50:53 2023] docker0: port 1(veth9bf9598) entered blocking state
+[Fri Aug 18 09:50:53 2023] docker0: port 1(veth9bf9598) entered forwarding state
+[Fri Aug 18 09:50:53 2023] IPv6: ADDRCONF(NETDEV_CHANGE): docker0: link becomes ready
+[Fri Aug 18 09:50:53 2023] neuron:npid_attach: neuron:npid_attach: pid=12203, slot=1
+[Fri Aug 18 09:50:58 2023] neuron:npid_attach: neuron:npid_attach: pid=12212, slot=2
+[Fri Aug 18 09:50:58 2023] neuron:nr_reset_thread_fn: nd0: initiating reset request 12212
+[Fri Aug 18 09:51:07 2023] neuron:nr_reset_thread_fn: nd0: reset request 12212 completed
+[Fri Aug 18 09:51:29 2023] neuron:npid_attach: neuron:npid_attach: pid=12547, slot=3
+[Fri Aug 18 09:51:30 2023] neuron:npid_detach: neuron:npid_detach: pid=12547, slot=3
+[Fri Aug 18 09:51:32 2023] neuron:npid_attach: neuron:npid_attach: pid=12631, slot=3
+[Fri Aug 18 09:54:11 2023] neuron:npid_detach: neuron:npid_detach: pid=12212, slot=2
+[Fri Aug 18 09:54:17 2023] neuron:npid_attach: neuron:npid_attach: pid=18071, slot=2
+[Fri Aug 18 09:54:17 2023] neuron:nr_reset_thread_fn: nd0: initiating reset request 18071
+[Fri Aug 18 09:54:25 2023] neuron:nr_reset_thread_fn: nd0: reset request 18071 completed
+[Fri Aug 18 09:57:25 2023] neuron:npid_detach: neuron:npid_detach: pid=18071, slot=2
+[Fri Aug 18 09:57:31 2023] neuron:npid_attach: neuron:npid_attach: pid=23765, slot=2
+[Fri Aug 18 09:57:31 2023] neuron:nr_reset_thread_fn: nd0: initiating reset request 23765
+[Fri Aug 18 09:57:39 2023] neuron:nr_reset_thread_fn: nd0: reset request 23765 completed
+[Fri Aug 18 09:57:39 2023] python: page allocation failure: order:9, mode:0xcc0(GFP_KERNEL), nodemask=(null),cpuset=docker-c7c30ff2d96fb453ad75480ed1ecd8340cd288f61501f6a14f75cbbcb265150e.scope,mems_allowed=0
+[Fri Aug 18 09:57:39 2023] CPU: 1 PID: 23777 Comm: python Tainted: G           OE     5.19.0-1025-aws #26~22.04.1-Ubuntu
+[Fri Aug 18 09:57:39 2023] Hardware name: Amazon EC2 inf2.xlarge/, BIOS 1.0 10/16/2017
+[Fri Aug 18 09:57:39 2023] Call Trace:
+[Fri Aug 18 09:57:39 2023]  <TASK>
+[Fri Aug 18 09:57:39 2023]  show_stack+0x52/0x69
+[Fri Aug 18 09:57:39 2023]  dump_stack_lvl+0x49/0x6d
+[Fri Aug 18 09:57:39 2023]  dump_stack+0x10/0x18
+[Fri Aug 18 09:57:39 2023]  warn_alloc+0x14b/0x170
+[Fri Aug 18 09:57:39 2023]  ? __alloc_pages_direct_compact+0x203/0x240
+[Fri Aug 18 09:57:39 2023]  __alloc_pages_slowpath.constprop.0+0x90c/0x990
+[Fri Aug 18 09:57:39 2023]  __alloc_pages+0x313/0x340
+[Fri Aug 18 09:57:39 2023]  __dma_direct_alloc_pages.constprop.0+0x8c/0x210
+[Fri Aug 18 09:57:39 2023]  dma_direct_alloc+0x7b/0x2a0
+[Fri Aug 18 09:57:39 2023]  dma_alloc_attrs+0x3e/0x80
+[Fri Aug 18 09:57:39 2023]  mc_alloc_align+0x407/0x630 [neuron]
+[Fri Aug 18 09:57:39 2023]  ts_nq_init+0x175/0x2f0 [neuron]
+[Fri Aug 18 09:57:39 2023]  ncdev_ioctl+0x199c/0x2100 [neuron]
+[Fri Aug 18 09:57:39 2023]  ? do_anonymous_page+0x207/0x3c0
+[Fri Aug 18 09:57:39 2023]  ? __seccomp_filter+0x4a/0x4b0
+[Fri Aug 18 09:57:39 2023]  __x64_sys_ioctl+0x9d/0xe0
+[Fri Aug 18 09:57:39 2023]  do_syscall_64+0x5c/0x90
+[Fri Aug 18 09:57:39 2023]  ? do_user_addr_fault+0x1e8/0x680
+[Fri Aug 18 09:57:39 2023]  ? do_syscall_64+0x69/0x90
+[Fri Aug 18 09:57:39 2023]  ? exit_to_user_mode_prepare+0x3b/0xd0
+[Fri Aug 18 09:57:39 2023]  ? irqentry_exit_to_user_mode+0x9/0x20
+[Fri Aug 18 09:57:39 2023]  ? irqentry_exit+0x21/0x40
+[Fri Aug 18 09:57:39 2023]  ? exc_page_fault+0x92/0x190
+[Fri Aug 18 09:57:39 2023]  entry_SYSCALL_64_after_hwframe+0x63/0xcd
+[Fri Aug 18 09:57:39 2023] RIP: 0033:0x7f97bd1893ab
+[Fri Aug 18 09:57:39 2023] Code: 0f 1e fa 48 8b 05 e5 7a 0d 00 64 c7 00 26 00 00 00 48 c7 c0 ff ff ff ff c3 66 0f 1f 44 00 00 f3 0f 1e fa b8 10 00 00 00 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d b5 7a 0d 00 f7 d8 64 89 01 48
+[Fri Aug 18 09:57:39 2023] RSP: 002b:00007f97070e6fa8 EFLAGS: 00000246 ORIG_RAX: 0000000000000010
+[Fri Aug 18 09:57:39 2023] RAX: ffffffffffffffda RBX: 00007f96fc00bf60 RCX: 00007f97bd1893ab
+[Fri Aug 18 09:57:39 2023] RDX: 00007f97070e6fc0 RSI: 0000000080084e35 RDI: 000000000000000f
+[Fri Aug 18 09:57:39 2023] RBP: 0000000000200000 R08: 0000000000000004 R09: 0000000000200000
+[Fri Aug 18 09:57:39 2023] R10: 00007f97070e7017 R11: 0000000000000246 R12: 0000000000000001
+[Fri Aug 18 09:57:39 2023] R13: 0000000000000001 R14: 0000000000000001 R15: 0000000000000000
+[Fri Aug 18 09:57:39 2023]  </TASK>
+[Fri Aug 18 09:57:39 2023] Mem-Info:
+[Fri Aug 18 09:57:39 2023] active_anon:516 inactive_anon:1499961 isolated_anon:0
+                            active_file:992145 inactive_file:1255231 isolated_file:441
+                            unevictable:8566 dirty:371788 writeback:4060
+                            slab_reclaimable:125012 slab_unreclaimable:27759
+                            mapped:743057 shmem:245 pagetables:5897 bounce:0
+                            kernel_misc_reclaimable:0
+                            free:40997 free_pcp:142 free_cma:0
+[Fri Aug 18 09:57:39 2023] Node 0 active_anon:2064kB inactive_anon:5999844kB active_file:3968580kB inactive_file:5020924kB unevictable:34264kB isolated(anon):0kB isolated(file):1764kB mapped:2972424kB dirty:1487348kB writeback:16240kB shmem:980kB shmem_thp: 0kB shmem_pmdmapped: 0kB anon_thp: 0kB writeback_tmp:0kB kernel_stack:4592kB pagetables:23588kB all_unreclaimable? no
+[Fri Aug 18 09:57:39 2023] Node 0 DMA free:13312kB boost:0kB min:64kB low:80kB high:96kB reserved_highatomic:0KB active_anon:0kB inactive_anon:0kB active_file:0kB inactive_file:0kB unevictable:0kB writepending:0kB present:15992kB managed:15360kB mlocked:0kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:0kB
+[Fri Aug 18 09:57:39 2023] lowmem_reserve[]: 0 2985 15617 15617 15617
+[Fri Aug 18 09:57:39 2023] Node 0 DMA32 free:71720kB boost:0kB min:12904kB low:16128kB high:19352kB reserved_highatomic:0KB active_anon:8kB inactive_anon:471392kB active_file:59960kB inactive_file:2337680kB unevictable:0kB writepending:1157632kB present:3129252kB managed:3063716kB mlocked:0kB bounce:0kB free_pcp:340kB local_pcp:112kB free_cma:0kB
+[Fri Aug 18 09:57:39 2023] lowmem_reserve[]: 0 0 12632 12632 12632
+[Fri Aug 18 09:57:39 2023] Node 0 Normal free:78956kB boost:0kB min:54612kB low:68264kB high:81916kB reserved_highatomic:0KB active_anon:2056kB inactive_anon:5528452kB active_file:3908876kB inactive_file:2683440kB unevictable:34264kB writepending:345504kB present:13264896kB managed:12943528kB mlocked:27488kB bounce:0kB free_pcp:248kB local_pcp:0kB free_cma:0kB
+[Fri Aug 18 09:57:39 2023] lowmem_reserve[]: 0 0 0 0 0
+[Fri Aug 18 09:57:39 2023] Node 0 DMA: 0*4kB 0*8kB 0*16kB 0*32kB 0*64kB 0*128kB 0*256kB 0*512kB 1*1024kB (U) 2*2048kB (UM) 2*4096kB (M) = 13312kB
+[Fri Aug 18 09:57:39 2023] Node 0 DMA32: 2855*4kB (UME) 2009*8kB (UME) 875*16kB (UME) 345*32kB (UME) 143*64kB (UME) 49*128kB (UME) 9*256kB (UE) 1*512kB (U) 1*1024kB (U) 0*2048kB 0*4096kB = 71796kB
+[Fri Aug 18 09:57:39 2023] Node 0 Normal: 196*4kB (UE) 228*8kB (UME) 1740*16kB (UE) 996*32kB (UME) 207*64kB (UME) 27*128kB (UE) 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 79024kB
+[Fri Aug 18 09:57:39 2023] Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+[Fri Aug 18 09:57:39 2023] Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+[Fri Aug 18 09:57:39 2023] 2250235 total pagecache pages
+[Fri Aug 18 09:57:39 2023] 0 pages in swap cache
+[Fri Aug 18 09:57:39 2023] Swap cache stats: add 0, delete 0, find 0/0
+[Fri Aug 18 09:57:39 2023] Free swap  = 0kB
+[Fri Aug 18 09:57:39 2023] Total swap = 0kB
+[Fri Aug 18 09:57:39 2023] 4102535 pages RAM
+[Fri Aug 18 09:57:39 2023] 0 pages HighMem/MovableOnly
+[Fri Aug 18 09:57:39 2023] 96884 pages reserved
+[Fri Aug 18 09:57:39 2023] 0 pages hwpoisoned
+[Fri Aug 18 09:57:39 2023] neuron:mc_alloc_internal: host mem occupied 24088576
+[Fri Aug 18 09:57:39 2023] neuron:npid_detach: neuron:npid_detach: pid=23765, slot=2
+[Fri Aug 18 09:58:59 2023] neuron:npid_detach: neuron:npid_detach: pid=12631, slot=3

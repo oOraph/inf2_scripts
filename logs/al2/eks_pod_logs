@@ -1,0 +1,29 @@
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR   HAL:write_padded                            memcpy_fn(0x7fdded5bb3a0) failed with -1
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:tpb_eng_init_hals_v2                    NC 0 init failed!
+
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:tdrv_init_one_mla_phase2                nd0 nc0 HAL init failed. error:1
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:notification_destroy                    Notifications not initialized! 
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:notification_destroy                    Notifications not initialized! 
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:notification_destroy                    Notifications not initialized! 
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:notification_destroy                    Notifications not initialized! 
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:notification_destroy                    Notifications not initialized! 
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:notification_destroy                    Notifications not initialized! 
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:notification_destroy                    Notifications not initialized! 
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:notification_destroy                    Notifications not initialized! 
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR  TDRV:tdrv_destroy                            TDRV not initialized
+2023-Aug-16 12:34:46.0918  5938:5992  ERROR   NRT:nrt_init                                Failed to initialize devices, error:1
+terminate called after throwing an instance of 'c10::Error'
+  what():  The PyTorch Neuron Runtime could not be initialized. Neuron Driver issues are logged
+to your system logs. See the Neuron Runtime's troubleshooting guide for help on this
+topic: https://awsdocs-neuron.readthedocs-hosted.com/en/latest/
+Exception raised from initialize at /opt/workspace/KaenaPyTorchRuntime/neuron_op/runtime.cpp:195 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7fddf03d4457 in /opt/conda/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, char const*) + 0x68 (0x7fddf039e4b5 in /opt/conda/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #2: neuron::NeuronRuntime::initialize() + 0xd21 (0x7fddeda99991 in /opt/conda/lib/python3.10/site-packages/torch_neuronx/lib/libtorchneuron.so)
+frame #3: neuron::Model::blocking_load() + 0x1dd (0x7fddedb88acd in /opt/conda/lib/python3.10/site-packages/torch_neuronx/lib/libtorchneuron.so)
+frame #4: std::thread::_State_impl<std::thread::_Invoker<std::tuple<std::shared_ptr<neuron::NeuronModel> (neuron::Model::*)(), neuron::Model*> > >::_M_run() + 0x31 (0x7fddedb8bbe1 in /opt/conda/lib/python3.10/site-packages/torch_neuronx/lib/libtorchneuron.so)
+frame #5: <unknown function> + 0xd3e79 (0x7fde67069e79 in /opt/conda/lib/python3.10/site-packages/../../libstdc++.so.6)
+frame #6: <unknown function> + 0x8609 (0x7fdebcdff609 in /lib/x86_64-linux-gnu/libpthread.so.0)
+frame #7: clone + 0x43 (0x7fdebcbc0133 in /lib/x86_64-linux-gnu/libc.so.6)
+
+Aborted (core dumped)

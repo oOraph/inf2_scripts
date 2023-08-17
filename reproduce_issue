@@ -1,0 +1,32 @@
+1. Spawn ec2 ubuntu 22.04 instance, inf2.xlarge instance_type, use a rootfs volume of 100G (more than enough, but 8 is not) connect there
+
+2. Launch ec2_script.sh provided in this repo
+
+3. Start a new session
+   sudo su
+   CONTAINER=$(docker ps | tail -n+2 | head -n1 | awk '{print $1}')
+   docker exec -it $CONTAINER /bin/bash
+   in container
+   $ neuron-ls
+   $ neuron-top
+
+Not sure if it's really related or just bad luck but every time I reproduced the issue:
+- I was performing inference within a container
+- I was running neuron-top both within and outside the container
+
+Issue seems easier to trigger with the Optimum exported mode, though I already observed it with the model exported in the manner described here:
+https://github.com/aws-neuron/aws-neuron-samples/blob/master/torch-neuronx/inference/hf_pretrained_sd2_512_inference.ipynb
+
+Info about the dockerfile used to build the image used in ec2_script.sh can be found in this repository
+(Dockerfile.*)
+
+-> not reproducible at will, can be reproduced on EKS as well,
+https://awsdocs-neuron.readthedocs-hosted.com/en/latest/containers/kubernetes-getting-started.html
+with AL2 instances using the following ami for example
+amazon-eks-node-1.27-v20230728, along with the user_data_al2.txt script provided in this repo as well
+
+On AL2 no further inference can be processed, and the node needs rebooting
+On Ubuntu, relaunching inference seems to work, eventhough the kernel seems tainted
+
+Logs obtained
+see logs/
