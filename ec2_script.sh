@@ -51,7 +51,9 @@ wget -O /tmp/sd2_compile_dir_512.tgz https://inf2-exports.s3.us-east-2.amazonaws
 
 tar xf /tmp/sd2_compile_dir_512.tgz -C /shared
 
+rm -f /tmp/sd2_compile_dir_512.tgz
+
 # This image is built with the provided Dockerfile
-docker run -d --rm --name test1 -v /shared:/shared raphael31415/aws-inf2-issue
+docker run -d --rm --device=/dev/neuron0 --name test1 -v /shared:/shared raphael31415/aws-inf2-issue
 
 neuron-top
