@@ -52,7 +52,7 @@ sudo apt-get update
 
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-sudo mkdir /shared
+sudo mkdir -p /shared
 
 wget -O /tmp/sd2_compile_dir_512.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd2_compile_dir_512.tgz
 sudo tar xf /tmp/sd2_compile_dir_512.tgz -C /shared
@@ -61,10 +61,10 @@ rm -f /tmp/sd2_compile_dir_512.tgz
 sudo docker run -d --device=/dev/neuron0 --name test1 -v /shared:/shared raphael31415/aws-inf2:1.0
 
 # wget -O /tmp/sd_neuron.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd_neuron.tgz
-# tar xf /tmp/sd_neuron.tgz -C /shared
+# sudo tar xf /tmp/sd_neuron.tgz -C /shared
 # rm -f /tmp/sd_neuron.tgz
 # This image is built with the provided Dockerfile.optimum_export
-# docker run -d --rm --device=/dev/neuron0 --name test1 -v /shared:/shared raphael31415/aws-inf2-optimum:1.0
+# sudo docker run -d --rm --device=/dev/neuron0 --name test1 -v /shared:/shared raphael31415/aws-inf2-optimum:1.0
 
 source ~/.bashrc
 
