@@ -10,10 +10,12 @@
    $ neuron-ls
    $ neuron-top
 
-
 Not sure if it's really related or just bad luck but every time I reproduced the issue:
 - I was performing inference within a container
 - I was running neuron-top both within and outside the container
+
+Issue seems easier to trigger with the Optimum exported mode, though I already observed it with the model exported in the manner described here:
+https://github.com/aws-neuron/aws-neuron-samples/blob/master/torch-neuronx/inference/hf_pretrained_sd2_512_inference.ipynb
 
 Info about the dockerfile used to build the image used in ec2_script.sh can be found in this repository
 (Dockerfile.*)
