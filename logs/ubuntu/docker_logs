@@ -1,0 +1,73 @@
+benchmark.utils.loadutils - INFO - 2023-08-18 08:33:44,284 - Loading diffusion prompts dataset
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,285 - Starting new HTTPS connection (1): huggingface.co:443
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,340 - https://huggingface.co:443 "GET /api/datasets/Gustavosta/Stable-Diffusion-Prompts HTTP/1.1" 200 703
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,342 - Starting new HTTPS connection (1): s3.amazonaws.com:443
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,435 - https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/Gustavosta/Stable-Diffusion-Prompts/Gustavosta/Stable-Diffusion-Prompts.py HTTP/1.1" 404 0
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,464 - https://huggingface.co:443 "GET /api/datasets/Gustavosta/Stable-Diffusion-Prompts HTTP/1.1" 200 703
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,466 - Starting new HTTPS connection (1): huggingface.co:443
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,501 - https://huggingface.co:443 "HEAD /datasets/Gustavosta/Stable-Diffusion-Prompts/resolve/d816d4a05cb89bde39dd99284c459801e1e7e69a/README.md HTTP/1.1" 200 0
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,503 - Starting new HTTPS connection (1): huggingface.co:443
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,540 - https://huggingface.co:443 "GET /datasets/Gustavosta/Stable-Diffusion-Prompts/resolve/d816d4a05cb89bde39dd99284c459801e1e7e69a/README.md HTTP/1.1" 200 777
+Downloading readme:   0%|          | 0.00/777 [00:00<?, ?B/s]Downloading readme: 100%|██████████| 777/777 [00:00<00:00, 10.2MB/s]
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,568 - https://huggingface.co:443 "GET /api/datasets/Gustavosta/Stable-Diffusion-Prompts/revision/d816d4a05cb89bde39dd99284c459801e1e7e69a HTTP/1.1" 200 703
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,599 - https://huggingface.co:443 "GET /api/datasets/Gustavosta/Stable-Diffusion-Prompts/tree/d816d4a05cb89bde39dd99284c459801e1e7e69a/data?expand=True HTTP/1.1" 200 1052
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,629 - https://huggingface.co:443 "GET /api/datasets/Gustavosta/Stable-Diffusion-Prompts/tree/d816d4a05cb89bde39dd99284c459801e1e7e69a?expand=True HTTP/1.1" 200 1007
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,638 - Starting new HTTPS connection (1): huggingface.co:443
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,688 - https://huggingface.co:443 "GET /api/datasets/Gustavosta/Stable-Diffusion-Prompts/revision/d816d4a05cb89bde39dd99284c459801e1e7e69a HTTP/1.1" 200 703
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,693 - Starting new HTTPS connection (1): huggingface.co:443
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,744 - https://huggingface.co:443 "HEAD /datasets/Gustavosta/Stable-Diffusion-Prompts/resolve/main/dataset_infos.json HTTP/1.1" 404 0
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:44,752 - Starting new HTTPS connection (1): storage.googleapis.com:443
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:45,004 - https://storage.googleapis.com:443 "HEAD /huggingface-nlp/cache/datasets/Gustavosta___stable-diffusion-prompts/default-9e0a45aadd4dc0bd/0.0.0/dataset_info.json HTTP/1.1" 404 0
+Downloading data files:   0%|          | 0/2 [00:00<?, ?it/s]
+Downloading data:   0%|          | 0.00/9.23M [00:00<?, ?B/s][Afsspec - DEBUG - 2023-08-18 08:33:45,007 - <File-like object HfFileSystem, datasets/Gustavosta/Stable-Diffusion-Prompts@d816d4a05cb89bde39dd99284c459801e1e7e69a/data/train.parquet> read: 0 - 4194304
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:45,032 - https://huggingface.co:443 "GET /datasets/Gustavosta/Stable-Diffusion-Prompts/resolve/d816d4a05cb89bde39dd99284c459801e1e7e69a/data%2Ftrain.parquet HTTP/1.1" 302 1123
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:45,033 - Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:45,058 - https://cdn-lfs.huggingface.co:443 "GET /repos/ee/15/ee15d1d412ee4220560eb56faadd7142b0e0ce558040665a98a771946715f9a2/0bf624e8a81f85a97af6924e406b7e504daf9e3cbf5d893dadd347e2e0759d31?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27train.parquet%3B+filename%3D%22train.parquet%22%3B&Expires=1692606825&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5MjYwNjgyNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9lZS8xNS9lZTE1ZDFkNDEyZWU0MjIwNTYwZWI1NmZhYWRkNzE0MmIwZTBjZTU1ODA0MDY2NWE5OGE3NzE5NDY3MTVmOWEyLzBiZjYyNGU4YTgxZjg1YTk3YWY2OTI0ZTQwNmI3ZTUwNGRhZjllM2NiZjVkODkzZGFkZDM0N2UyZTA3NTlkMzE~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=p2NsthBhCG41GgocMK4viUW-rGVbwmrYHa0S6cZ4wSoVnkGe1n2WVM8nWbhuAi1ksNR0AtgdgDZ0OF-eqWMNHUPJPHTMMxuuf9QeS-UfIlG~IUO0Y3si3Q49e2q-GLBBaDbx86dkn3K8Vh7KXMMXtXTjFd1fI-vHQTa0fV8Cz-vS8gzdfobdddi6T5OgPMXTd~~1zUDG2L5bctDrw1ptSksxsPrUIBXmhrtsJb-FjVeF45-HUiByNaPwm3PTasq6IaHRfReA5c~fPbYcmFLjqhBNEI7zYD9~0mX1-CVLTbjORtr6YqlzX8RDU-8tA7x3PWuW9EM38EKo4EAmLqPwIA__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 206 9234235
+fsspec - DEBUG - 2023-08-18 08:33:45,095 - <File-like object HfFileSystem, datasets/Gustavosta/Stable-Diffusion-Prompts@d816d4a05cb89bde39dd99284c459801e1e7e69a/data/train.parquet> read: 4194304 - 8388608
+fsspec - DEBUG - 2023-08-18 08:33:45,098 - <File-like object HfFileSystem, datasets/Gustavosta/Stable-Diffusion-Prompts@d816d4a05cb89bde39dd99284c459801e1e7e69a/data/train.parquet> read: 8388608 - 12582912
+fsspec - DEBUG - 2023-08-18 08:33:45,099 - <File-like object HfFileSystem, datasets/Gustavosta/Stable-Diffusion-Prompts@d816d4a05cb89bde39dd99284c459801e1e7e69a/data/train.parquet> read: 9234235 - 13428539
+Downloading data: 100%|██████████| 9.23M/9.23M [00:00<00:00, 84.9MB/s]
+Downloading data files:  50%|█████     | 1/2 [00:00<00:00,  9.06it/s]
+Downloading data:   0%|          | 0.00/1.03M [00:00<?, ?B/s][Afsspec - DEBUG - 2023-08-18 08:33:45,118 - <File-like object HfFileSystem, datasets/Gustavosta/Stable-Diffusion-Prompts@d816d4a05cb89bde39dd99284c459801e1e7e69a/data/eval.parquet> read: 0 - 4194304
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:45,146 - https://huggingface.co:443 "GET /datasets/Gustavosta/Stable-Diffusion-Prompts/resolve/d816d4a05cb89bde39dd99284c459801e1e7e69a/data%2Feval.parquet HTTP/1.1" 302 1119
+urllib3.connectionpool - DEBUG - 2023-08-18 08:33:45,150 - https://cdn-lfs.huggingface.co:443 "GET /repos/ee/15/ee15d1d412ee4220560eb56faadd7142b0e0ce558040665a98a771946715f9a2/e2df7c8d0b1b7bff9bd0afcf61b841181876920ab55c23d1791c6be99b5e9e25?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27eval.parquet%3B+filename%3D%22eval.parquet%22%3B&Expires=1692606825&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY5MjYwNjgyNX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy9lZS8xNS9lZTE1ZDFkNDEyZWU0MjIwNTYwZWI1NmZhYWRkNzE0MmIwZTBjZTU1ODA0MDY2NWE5OGE3NzE5NDY3MTVmOWEyL2UyZGY3YzhkMGIxYjdiZmY5YmQwYWZjZjYxYjg0MTE4MTg3NjkyMGFiNTVjMjNkMTc5MWM2YmU5OWI1ZTllMjU~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=cga0RTW7-OFp308Y8E3bUfCSjqlBQAPtqD4LeQsGKwpwDZzr0wC-KXLscm3TchqInjdVKTNO9jR2VbhIJybF-wUy-3C8fZoV0-MzAChHdfOCJv0vutgVkcrbeeyTtlstS37mv-a8Y7xokvqCy7AS8M~S8p3~DONlxciBNjCHiL5lZOOFM9ttfCETQ8wwB6CHJG4NVOg-fsVdSr5SCvY5u4h-LWAQi-S9wB~DulJ-Ib4Vh7vAuSef9uxNO8Yj-WXUTBCMA3QHqno-RLNTY2yJSHa6-ADMPATLLbFOKuB8Tx~fMOPXXNRK6CXq6FBvwmi9AfjO3UCYpQ057sH2Lp-YBw__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 206 1026077
+fsspec - DEBUG - 2023-08-18 08:33:45,157 - <File-like object HfFileSystem, datasets/Gustavosta/Stable-Diffusion-Prompts@d816d4a05cb89bde39dd99284c459801e1e7e69a/data/eval.parquet> read: 1026077 - 5220381
+Downloading data: 100%|██████████| 1.03M/1.03M [00:00<00:00, 25.9MB/s]
+Downloading data files: 100%|██████████| 2/2 [00:00<00:00, 13.19it/s]
+Extracting data files:   0%|          | 0/2 [00:00<?, ?it/s]Extracting data files: 100%|██████████| 2/2 [00:00<00:00, 2634.61it/s]
+Generating train split: 0 examples [00:00, ? examples/s]fsspec.local - DEBUG - 2023-08-18 08:33:45,231 - open file: /root/.cache/huggingface/datasets/Gustavosta___stable-diffusion-prompts/default-9e0a45aadd4dc0bd/0.0.0/e58c486e4bad3c9cf8d969f920449d1103bbdf069a7150db2cf96c695aeca990.incomplete/stable-diffusion-prompts-train-00000-00000-of-NNNNN.arrow
+Generating train split: 73718 examples [00:00, 653366.09 examples/s]Generating train split: 73718 examples [00:00, 652084.62 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]fsspec.local - DEBUG - 2023-08-18 08:33:45,273 - open file: /root/.cache/huggingface/datasets/Gustavosta___stable-diffusion-prompts/default-9e0a45aadd4dc0bd/0.0.0/e58c486e4bad3c9cf8d969f920449d1103bbdf069a7150db2cf96c695aeca990.incomplete/stable-diffusion-prompts-test-00000-00000-of-NNNNN.arrow
+Generating test split: 8192 examples [00:00, 1748587.19 examples/s]
+fsspec.local - DEBUG - 2023-08-18 08:33:45,278 - open file: /root/.cache/huggingface/datasets/Gustavosta___stable-diffusion-prompts/default-9e0a45aadd4dc0bd/0.0.0/e58c486e4bad3c9cf8d969f920449d1103bbdf069a7150db2cf96c695aeca990.incomplete/dataset_info.json
+benchmark.utils.loadutils - INFO - 2023-08-18 08:33:45,280 - Selecting random prompts
+benchmark.utils.loadutils - DEBUG - 2023-08-18 08:33:45,286 - 50 samples, selected indices [56571 66678 36998 16814 48277 54947 20485 40587  7730 39055 66069 27237
+ 23623 57577 17190 73196 35274 24149 23056 64998 65839  2009  1805 56285
+ 18585 39820 13858 34166 72289 69803 54134 24938 15875 27455 54626 35802
+ 57985 29726 35652 12760 47961 42454 14165 68434  5986  4788 10062 50263
+ 14858 65749]
+2023-Aug-18 08:33:55.0077     7:22    ERROR  TDRV:notification_configure_ndl              Failed to initialize notification (-1).
+2023-Aug-18 08:33:55.0077     7:22    ERROR  TDRV:notification_init                       Failed to setup error notification queue -1
+
+2023-Aug-18 08:33:55.0077     7:22    ERROR  TDRV:tpb_eng_sw_init                         Failed to init notifications -1
+
+2023-Aug-18 08:33:55.0077     7:22    ERROR  TDRV:tdrv_init_one_mla_phase2                Failed to init NC SW states 1 of MLA 00:1f.0
+2023-Aug-18 08:33:55.0079     7:22    ERROR  TDRV:notification_destroy                    Notifications not initialized! notification-mla0-tpb1
+2023-Aug-18 08:33:55.0080     7:22    ERROR  TDRV:tdrv_destroy                            TDRV not initialized
+2023-Aug-18 08:33:55.0080     7:22    ERROR   NRT:nrt_init                                Failed to initialize devices, error:4294967295
+terminate called after throwing an instance of 'c10::Error'
+  what():  The PyTorch Neuron Runtime could not be initialized. Neuron Driver issues are logged
+to your system logs. See the Neuron Runtime's troubleshooting guide for help on this
+topic: https://awsdocs-neuron.readthedocs-hosted.com/en/latest/
+Exception raised from initialize at /opt/workspace/KaenaPyTorchRuntime/neuron_op/runtime.cpp:195 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f896742c457 in /opt/conda/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, char const*) + 0x68 (0x7f89673f64b5 in /opt/conda/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #2: neuron::NeuronRuntime::initialize() + 0xd21 (0x7f8964af1991 in /opt/conda/lib/python3.10/site-packages/torch_neuronx/lib/libtorchneuron.so)
+frame #3: neuron::Model::blocking_load() + 0x1dd (0x7f8964be0acd in /opt/conda/lib/python3.10/site-packages/torch_neuronx/lib/libtorchneuron.so)
+frame #4: std::thread::_State_impl<std::thread::_Invoker<std::tuple<std::shared_ptr<neuron::NeuronModel> (neuron::Model::*)(), neuron::Model*> > >::_M_run() + 0x31 (0x7f8964be3be1 in /opt/conda/lib/python3.10/site-packages/torch_neuronx/lib/libtorchneuron.so)
+frame #5: <unknown function> + 0xd3e79 (0x7f89de0c1e79 in /opt/conda/lib/python3.10/site-packages/../../libstdc++.so.6)
+frame #6: <unknown function> + 0x8609 (0x7f89ea03b609 in /lib/x86_64-linux-gnu/libpthread.so.0)
+frame #7: clone + 0x43 (0x7f89e9dfc133 in /lib/x86_64-linux-gnu/libc.so.6)
+
+/start_optimum.sh: line 5:     7 Aborted                 (core dumped) python /opt/test/benchmark/inference/optimum_neuron_inference.py -n 50 -s 42 -o /tmp/result1.csv -b 1 -m /shared/sd_neuron
+SLEEPING

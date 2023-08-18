@@ -54,17 +54,29 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 sudo mkdir -p /shared
 
-wget -O /tmp/sd2_compile_dir_512.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd2_compile_dir_512.tgz
-sudo tar xf /tmp/sd2_compile_dir_512.tgz -C /shared
-rm -f /tmp/sd2_compile_dir_512.tgz
-# This image is built with the provided Dockerfile.aws_export
-sudo docker run -d --device=/dev/neuron0 --name test1 -v /shared:/shared raphael31415/aws-inf2:1.0
 
-# wget -O /tmp/sd_neuron.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd_neuron.tgz
-# sudo tar xf /tmp/sd_neuron.tgz -C /shared
-# rm -f /tmp/sd_neuron.tgz
+# Model exported using the aws neuron sample notebook
+# wget -O /tmp/sd2_compile_dir_512.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd2_compile_dir_512.tgz
+# sudo tar xf /tmp/sd2_compile_dir_512.tgz -C /shared
+# rm -f /tmp/sd2_compile_dir_512.tgz
+# This image is built with the provided Dockerfile.aws_export
+# sudo docker run -d --device=/dev/neuron0 --name test1 -v /shared:/shared raphael31415/aws-inf2:1.0
+
+
+# Model exported using optimum
+# optimum-cli export neuron --model stabilityai/stable-diffusion-2-1-base \
+#   --task stable-diffusion \
+#   --batch_size 1 \
+#   --height 512 `# height in pixels of generated image, eg. 512, 768` \
+#   --width 512 `# width in pixels of generated image, eg. 512, 768` \
+#   --auto-cast matmul \
+#   --auto-cast-type bf16 \
+#   sd_neuron/
+wget -O /tmp/sd_neuron.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd_neuron.tgz
+sudo tar xf /tmp/sd_neuron.tgz -C /shared
+rm -f /tmp/sd_neuron.tgz
 # This image is built with the provided Dockerfile.optimum_export
-# sudo docker run -d --rm --device=/dev/neuron0 --name test1 -v /shared:/shared raphael31415/aws-inf2-optimum:1.0
+sudo docker run -d --rm --device=/dev/neuron0 --name test1 -v /shared:/shared raphael31415/aws-inf2-optimum:1.0
 
 source ~/.bashrc
 
