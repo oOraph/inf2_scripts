@@ -11,6 +11,10 @@
    $ neuron-top
 
 
+Not sure if it's really related or just bad luck but every time I reproduced the issue:
+- I was performing inference within a container
+- I was running neuron-top both within and outside the container
+
 Info about the dockerfile used to build the image used in ec2_script.sh can be found in this repository
 (Dockerfile.*)
 
