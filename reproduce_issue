@@ -1,4 +1,4 @@
-1. Spawn ec2 ubuntu 22.04 instance, connect there
+1. Spawn ec2 ubuntu 22.04 instance, inf2.xlarge instance_type, use a rootfs volume of 100G (more than enough, but 8 is not) connect there
 
 2. Launch ec2_script.sh provided in this repo
 

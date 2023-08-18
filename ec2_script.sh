@@ -2,7 +2,7 @@
 
 set -e -x -o pipefail -u
 
-echo '$nrconf{restart} = '"'a';" | tee -a /etc/needrestart/needrestart.conf
+echo '$nrconf{restart} = '"'a';" | sudo tee -a /etc/needrestart/needrestart.conf
 
 echo Install Neuron drivers and tools
 
