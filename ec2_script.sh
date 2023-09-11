@@ -63,7 +63,7 @@ sudo mkdir -p /shared
 # sudo docker run -d --device=/dev/neuron0 --name test1 -v /shared:/shared raphael31415/aws-inf2:1.0
 
 # Model exported using a tweaked aws neuron sample notebook, removing the optimized attention
-# wget -O /tmp/sd2_compile_dir_512.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd2_compile_dir_512_non_optimized_attn.tgz
+# wget -O /tmp/sd2_compile_dir_512_non_optimized.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd2_compile_dir_512_non_optimized_attn.tgz
 # sudo tar xf /tmp/sd2_compile_dir_512_non_optimized_attn.tgz -C /shared
 # sudo mv /shared/sd2_compile_dir_512_non_optimized_attn /shared/sd2_compile_dir_512
 # rm -f /tmp/sd2_compile_dir_512_non_optimized_attn.tgz
@@ -94,7 +94,7 @@ sudo mkdir -p /shared
 #   --auto-cast matmul \
 #   --auto-cast-type bf16 \
 #   sd_neuron/
-wget -O /tmp/sd_neuron.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd_neuron_optimized_attn.tgz
+wget -O /tmp/sd_neuron_optimized.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd_neuron_optimized_attn.tgz
 sudo tar xf /tmp/sd_neuron_optimized_attn.tgz -C /shared
 sudo mv /shared/sd_neuron_optimized_attn /shared/sd_neuron
 rm -f /tmp/sd_neuron_optimized_attn.tgz
