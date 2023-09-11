@@ -94,7 +94,7 @@ sudo mkdir -p /shared
 #   --auto-cast matmul \
 #   --auto-cast-type bf16 \
 #   sd_neuron/
-wget -O /tmp/sd_neuron_optimized.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd_neuron_optimized_attn.tgz
+wget -O /tmp/sd_neuron_optimized_attn.tgz https://inf2-exports.s3.us-east-2.amazonaws.com/sd_neuron_optimized_attn.tgz
 sudo tar xf /tmp/sd_neuron_optimized_attn.tgz -C /shared
 sudo mv /shared/sd_neuron_optimized_attn /shared/sd_neuron
 rm -f /tmp/sd_neuron_optimized_attn.tgz
